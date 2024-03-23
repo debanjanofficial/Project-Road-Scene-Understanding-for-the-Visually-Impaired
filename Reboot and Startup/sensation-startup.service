@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Sensation on Startup
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/shaun/Downloads/rsu-vi-sensation-feedbackResolution/Execution/sensation.py
+User=shaun
+Group=shaun
+Restart=on-failure
+RestartSec=5s
+StartLimitInterval=0
+StartLimitBurst=0
+
+[Install]
+WantedBy=multi-user.target
